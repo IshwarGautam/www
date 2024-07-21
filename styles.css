@@ -8,7 +8,7 @@ p {
 
 body {
   font-family: "Roboto", sans-serif;
-  background: linear-gradient(to right, #ff6f61, #d085c7);
+  background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -23,13 +23,13 @@ body {
 
 @keyframes gradientAnimation {
   0% {
-    background-position: 0% 0%;
+    background-position: 0% 50%;
   }
   50% {
-    background-position: 100% 100%;
+    background-position: 100% 50%;
   }
   100% {
-    background-position: 0% 0%;
+    background-position: 0% 50%;
   }
 }
 
@@ -269,6 +269,10 @@ p:hover {
 }
 
 @keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
   to {
     opacity: 1;
     transform: translateY(0);
