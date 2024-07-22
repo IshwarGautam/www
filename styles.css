@@ -1,5 +1,5 @@
 :root {
-  --boy-top-offset: -60px; /* Default offset for the boy image */
+  --subscribe-top-offset: -95px; /* Default offset for the boy image */
 }
 
 body,
@@ -41,14 +41,21 @@ body {
   text-align: center;
 }
 
-.boy-img {
+.sub-img {
   position: absolute;
-  top: var(--boy-top-offset); /* Use the CSS variable for the top offset */
+  top: var(
+    --subscribe-top-offset
+  ); /* Use the CSS variable for the top offset */
   left: 50%;
   transform: translateX(-50%);
   width: 150px; /* Adjust size as needed */
   height: auto;
   z-index: 1; /* Ensure the image is above the container but below the text */
+}
+
+.message {
+  color: #211b1b;
+  font-size: 12px;
 }
 
 .container {
@@ -63,7 +70,6 @@ body {
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
   overflow: visible; /* Ensure children are visible */
   max-width: 100%;
-  margin-top: 150px; /* Add margin to push it down and leave space for the boy image */
 }
 
 .container::before {
@@ -238,11 +244,16 @@ p:hover {
     height: 40px;
   }
 
-  .boy-img {
+  .sub-img {
     width: 120px; /* Adjust size for smaller screens */
     top: calc(
-      var(--boy-top-offset) + 40px
+      var(--subscribe-top-offset) + 20px
     ); /* Adjust top offset for smaller screens */
+  }
+
+  .message {
+    color: #211b1b;
+    font-size: 10px;
   }
 }
 
@@ -271,11 +282,16 @@ p:hover {
     height: 30px;
   }
 
-  .boy-img {
+  .sub-img {
     width: 100px; /* Adjust size for smaller screens */
     top: calc(
-      var(--boy-top-offset) + 70px
+      var(--subscribe-top-offset) + 30px
     ); /* Adjust top offset for smaller screens */
+  }
+
+  .message {
+    color: #211b1b;
+    font-size: 8px;
   }
 }
 
